@@ -1,10 +1,10 @@
 <article class="project-card{% if project.placeholder %} project-placeholder{% endif %}" data-category="{{ project.category }}">
   <a class="project-image-link" href="{{ ('/work/' + project.slug + '/') | asset }}" aria-label="Explore {{ project.title }}">
     <img src="{{ project.image | asset }}" alt="{{ project.alt }}" width="1200" height="800" loading="lazy" decoding="async">
-    <span class="project-status">{{ project.status }}</span><span class="project-open" aria-hidden="true">↗</span>
+    <span class="project-status">{{ project.status }}</span><span class="project-open" aria-hidden="true">{% icon "arrow-up-right" %}</span>
     {% if project.placeholder %}<span class="placeholder-type">TO BE<br>CONTINUED.</span>{% endif %}
   </a>
   <div class="project-meta"><span class="eyebrow">{{ project.number }} / {{ project.format }}</span><span class="eyebrow">{{ project.category }}</span></div>
-  <a href="{{ ('/work/' + project.slug + '/') | asset }}" class="project-title"><h3>{{ project.title }}</h3><span aria-hidden="true">↗</span></a>
+  <a href="{{ ('/work/' + project.slug + '/') | asset }}" class="project-title"><h3>{{ project.title }}</h3><span aria-hidden="true">{% icon "arrow-up-right" %}</span></a>
   {% if project.slug == 'momma-loves-me' %}<p class="project-image-note">Concept artwork · Official stills to follow</p>{% endif %}
 </article>

@@ -33,3 +33,13 @@
 @media(min-width:521px) and (max-width:850px){.header-statement{display:none}.navigation{gap:20px}}
 @media(max-width:760px){.store-section{padding-top:25px;padding-bottom:55px}.store-layout{gap:30px;margin-top:30px}.store-copy h2{font-size:8vw}.store-copy>p{font-size:11px;margin:20px 0}.store-copy .round-link{font-size:10px;gap:12px}}
 @media(max-width:520px){.store-layout{grid-template-columns:1fr;gap:30px}.store-copy h2{font-size:15vw}.store-copy>p{font-size:12px;max-width:330px}.store-copy .round-link{font-size:11px}.store-image{aspect-ratio:1.2}.nav-store{display:flex;justify-content:space-between;align-items:center}.store-section .section-topline>.eyebrow:last-child{font-size:7px;text-align:right;max-width:100px}}
+.icon{display:inline-block;width:1em;height:1em;vertical-align:-.125em;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.2;stroke-linecap:square;stroke-linejoin:miter}
+.icon-asterisk,.icon-play{fill:currentColor;stroke:none}
+.hero-star .icon,.asterisk .icon{width:.8em;height:.8em;vertical-align:middle}
+.play-disc{padding-left:0}
+.play-disc .icon{width:14px;height:14px;transform:translateX(1px)}
+.nav-store .icon,.motion-toggle .icon{width:12px;height:12px}
+.motion-toggle{display:flex;align-items:center;gap:7px}
+.manifesto-track .icon{width:12px;height:12px;margin:0 4px;vertical-align:-2px}
+.contact-email>span{line-height:1}
+.cta-arrow .icon{vertical-align:middle}

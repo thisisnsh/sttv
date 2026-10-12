@@ -1,3 +1,5 @@
+import { icon } from './src/_includes/icons.js';
+
 export default function (eleventyConfig) {
   const pathPrefix = normalizePrefix(process.env.PATH_PREFIX || "/");
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
@@ -7,6 +9,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value).replace(/</g, "\\u003c"));
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
   eleventyConfig.addFilter("categories", (projects) => [...new Set(projects.map((project) => project.category))]);
+  eleventyConfig.addShortcode("icon", icon);
   eleventyConfig.addGlobalData("pathPrefix", pathPrefix);
   eleventyConfig.addGlobalData("indexable", process.env.SITE_INDEXABLE === "true");
   eleventyConfig.addGlobalData("siteUrl", process.env.SITE_URL || "https://stolentribe.tv");

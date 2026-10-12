@@ -65,11 +65,21 @@
   const backgroundVideo = document.querySelector('.hero-video');
   const motionButton = document.querySelector('.motion-toggle');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  function setMotionState(paused) {
+    const label = motionButton?.querySelector('.motion-label');
+    const path = motionButton?.querySelector('svg path');
+    if (label) label.textContent = paused ? 'Play motion' : 'Pause motion';
+    if (path) {
+      path.setAttribute('d', paused ? 'm7 4 14 8-14 8Z' : 'M8 4v16M16 4v16');
+      path.setAttribute('fill', paused ? 'currentColor' : 'none');
+    }
+    motionButton?.setAttribute('aria-label', paused ? 'Play background video' : 'Pause background video');
+  }
   if (backgroundVideo && !reducedMotion.matches) {
-    backgroundVideo.play().catch(() => { motionButton.textContent = 'Play motion ▶'; motionButton.setAttribute('aria-label', 'Play background video'); });
+    backgroundVideo.play().catch(() => setMotionState(true));
     motionButton?.addEventListener('click', () => {
-      if (backgroundVideo.paused) { backgroundVideo.play().then(() => { motionButton.textContent = 'Pause motion Ⅱ'; motionButton.setAttribute('aria-label', 'Pause background video'); }).catch(() => {}); }
-      else { backgroundVideo.pause(); motionButton.textContent = 'Play motion ▶'; motionButton.setAttribute('aria-label', 'Play background video'); }
+      if (backgroundVideo.paused) { backgroundVideo.play().then(() => setMotionState(false)).catch(() => {}); }
+      else { backgroundVideo.pause(); setMotionState(true); }
     });
   } else if (motionButton) { motionButton.hidden = true; }
   reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) { backgroundVideo?.pause(); if (motionButton) motionButton.hidden = true; } });

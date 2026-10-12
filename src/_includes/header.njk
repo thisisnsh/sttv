@@ -1,11 +1,11 @@
 <header class="site-header" id="top">
   <a class="brand" href="{{ '/' | asset }}" aria-label="Stolen Tribe home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-name">STOLEN<br>TRIBE</span></a>
   <div class="header-statement">Independent minds.<br>Unforgettable stories.</div>
-  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
+  <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">{% icon "plus" %}</span></button>
   <nav class="navigation" id="navigation" aria-label="Main navigation">
     <a href="{{ '/work/' | asset }}" {% if nav == 'work' %}aria-current="page"{% endif %}>The work<span class="nav-index">01</span></a>
     <a href="{{ '/studio/' | asset }}" {% if nav == 'studio' %}aria-current="page"{% endif %}>The tribe<span class="nav-index">02</span></a>
-    <a href="{{ site.store }}" class="nav-store" target="_blank" rel="noopener noreferrer">The store <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
-    <a href="{{ '/contact/' | asset }}" class="nav-contact" {% if nav == 'contact' %}aria-current="page"{% endif %}>Let’s talk <span aria-hidden="true">↗</span></a>
+    <a href="{{ site.store }}" class="nav-store" target="_blank" rel="noopener noreferrer">The store <span aria-hidden="true">{% icon "arrow-up-right" %}</span><span class="sr-only"> (opens in a new tab)</span></a>
+    <a href="{{ '/contact/' | asset }}" class="nav-contact" {% if nav == 'contact' %}aria-current="page"{% endif %}>Let’s talk <span aria-hidden="true">{% icon "arrow-up-right" %}</span></a>
   </nav>
 </header>

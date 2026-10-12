@@ -48,9 +48,9 @@
   <main id="main">{{ content | safe }}</main>
   {% include 'footer.njk' %}
   <dialog class="film-dialog" id="film-dialog" aria-labelledby="film-title">
-    <div class="film-dialog-bar"><div><span class="eyebrow">Now playing</span><h2 id="film-title">Studio film</h2></div><button class="film-close" type="button" aria-label="Close film">Close <span aria-hidden="true">×</span></button></div>
+    <div class="film-dialog-bar"><div><span class="eyebrow">Now playing</span><h2 id="film-title">Studio film</h2></div><button class="film-close" type="button" aria-label="Close film">Close <span aria-hidden="true">{% icon "close" %}</span></button></div>
     <div class="film-player" id="film-player"></div>
-    <div class="film-dialog-caption"><p id="film-note"></p><a id="film-external" href="https://vimeo.com/1100394104/823ccd916b" target="_blank" rel="noopener noreferrer">Open video in a new tab ↗</a></div>
+    <div class="film-dialog-caption"><p id="film-note"></p><a id="film-external" href="https://vimeo.com/1100394104/823ccd916b" target="_blank" rel="noopener noreferrer">Open video in a new tab {% icon "arrow-up-right" %}</a></div>
   </dialog>
 </body>
 </html>
