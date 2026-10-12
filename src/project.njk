@@ -1,0 +1,14 @@
+---
+layout: base.njk
+pagination:
+  data: projects
+  size: 1
+  alias: project
+  addAllPagesToCollections: true
+permalink: "/work/{{ project.slug }}/"
+nav: work
+---
+<section class="project-intro section-shell"><a class="text-link" href="{{ '/work/' | asset }}">← All frames</a><div class="section-topline"><span class="eyebrow">{{ project.number }} / {{ project.format }}</span><span class="eyebrow">{{ project.status }}</span></div><h1>{{ project.title }}</h1><p class="project-lede">{{ project.summary }}</p></section>
+<section class="project-hero section-shell" aria-label="{{ project.title }} media"><div class="project-hero-frame"><img src="{{ project.image | asset }}" alt="{{ project.alt }}" width="1600" height="900" fetchpriority="high">{% if project.videoId %}<button type="button" class="reel-button" data-film data-provider="{{ project.provider }}" data-id="{{ project.videoId }}" data-hash="{{ project.videoHash }}" data-title="{{ project.videoTitle }}" data-note="Linked from the current studio website. Availability is controlled by the video’s owner."><span class="play-disc" aria-hidden="true">▶</span><span>Watch the film<small>{{ project.videoTitle }} ↗</small></span></button>{% elif project.placeholder %}<span class="placeholder-type">YOUR NEXT<br>GREAT STORY.</span>{% else %}<span class="image-caption eyebrow">Official film link to follow</span>{% endif %}</div><p class="concept-caption">{{ project.imageNote }}</p></section>
+<section class="project-story section-shell"><div><span class="eyebrow">A closer look</span><h2>Behind <span class="serif-word">the frame.</span></h2></div><div><p>{{ project.description }}</p><dl class="project-facts"><div><dt>Category</dt><dd>{{ project.category }}</dd></div><div><dt>Format</dt><dd>{{ project.format }}</dd></div><div><dt>Status</dt><dd>{{ project.status }}</dd></div><div><dt>Creative credits</dt><dd>To be supplied by the studio</dd></div></dl></div></section>
+<section class="project-still-placeholder section-shell"><span class="eyebrow">Room for the full story</span><div class="still-grid"><div><span>01 / Behind the scenes</span><span class="plus" aria-hidden="true">+</span><p>Production still</p></div><div><span>02 / In the frame</span><span class="plus" aria-hidden="true">+</span><p>Film still</p></div></div></section>

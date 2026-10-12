@@ -1,0 +1,5 @@
+[
+  { "number": "01", "title": "Original film & television", "short": "Worlds worth getting lost in.", "description": "Original stories rooted in the cultures and experiences of the Black diaspora. From the first spark of an idea to a world built for the screen.", "tags": ["Original development", "Film", "Television", "Book adaptations"] },
+  { "number": "02", "title": "Branded content & production", "short": "Culture moves. So should your story.", "description": "Creative production for agencies, brands and collaborators. Music videos, brand films, commercials and digital content shaped around a distinct point of view.", "tags": ["Brand films", "Commercials", "Music videos", "Digital & social"] },
+  { "number": "03", "title": "Animation & new worlds", "short": "Imagination doesn’t need permission.", "description": "Animated storytelling and live action adaptations that open up new worlds. A space for bold ideas, different formats and the next generation of voices.", "tags": ["Animation", "Family stories", "Adaptations", "Creative development"] }
+]

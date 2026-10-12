@@ -1,0 +1,13 @@
+node_modules/
+_site/
+.DS_Store
+test-results/
+playwright-report/
+.env
+.env.*
+!.env.example
+output/
+.local-notes/
+design-assets/ocean.jpg
+design-assets/landscape.jpg
+design-assets/studio-ident-poster.jpg

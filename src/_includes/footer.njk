@@ -1,0 +1,12 @@
+{% if not contact %}
+<section class="contact-cta section-shell" aria-labelledby="cta-title">
+  <div class="section-topline"><span class="eyebrow">Every great story starts somewhere.</span><span class="eyebrow">Make it here. ↙</span></div>
+  <a href="{{ '/contact/' | asset }}" class="cta-link"><h2 id="cta-title">LET’S MAKE<br><span class="serif-word">a little</span> HISTORY.</h2><span class="cta-arrow" aria-hidden="true">↗</span></a>
+  <div class="cta-bottom"><p>A first thought. A fully formed script. A beautiful what if.<br>We’d love to hear it.</p><a class="text-link" href="mailto:{{ site.email }}">{{ site.email }} ↗</a></div>
+</section>
+{% endif %}
+<footer class="site-footer section-shell">
+  <div class="footer-top"><a class="footer-wordmark" href="{{ '/' | asset }}">STOLEN TRIBE</a><p>Rooted in culture.<br>Built for the world.</p></div>
+  <div class="footer-links"><div><span class="eyebrow">Find your people</span><a href="{{ site.instagram }}" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="{{ site.linkedin }}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div><div><span class="eyebrow">Explore</span><a href="{{ '/work/' | asset }}">The work</a><a href="{{ '/studio/' | asset }}">The tribe</a><a href="{{ '/services/' | asset }}">What we do</a><a href="{{ site.store }}" target="_blank" rel="noopener noreferrer">Shop STP ↗</a><a href="{{ '/contact/' | asset }}">Contact</a></div><div><span class="eyebrow">Our corner of the world</span><p>{{ site.location }}<br>Stories everywhere.</p><a href="mailto:{{ site.email }}">{{ site.email }}</a></div></div>
+  <div class="footer-bottom"><span>© {{ '' | year }} {{ site.legalName }}.</span><span>TV. Film. Culture.</span><div><a href="{{ '/privacy/' | asset }}">Privacy</a><a href="#top">Back to top ↑</a></div></div>
+</footer>

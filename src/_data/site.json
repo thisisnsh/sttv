@@ -1,0 +1,24 @@
+{
+  "name": "Stolen Tribe",
+  "legalName": "Stolen Tribe LLC",
+  "tagline": "Stories without borders.",
+  "description": "Stolen Tribe is an independent TV and film content studio in Jersey City, creating original stories and amplifying voices across the Black diaspora. Explore film, television, animation and branded production.",
+  "email": "info@stolentribe.tv",
+  "phone": "+1 781 513 4812",
+  "phoneHref": "+17815134812",
+  "location": "Jersey City, NJ",
+  "instagram": "https://www.instagram.com/stolentribe__/",
+  "linkedin": "https://www.linkedin.com/company/stolen-tribe",
+  "store": "https://shopstp.store/",
+  "hero": {
+    "image": "/assets/images/hero.webp",
+    "alt": "A red dirt road winds through tropical hills at dusk, with a lone traveler looking toward the horizon.",
+    "video": "",
+    "reelProvider": "vimeo",
+    "reelId": "1100394104",
+    "reelHash": "823ccd916b",
+    "reelTitle": "Stolen Tribe — studio ident",
+    "reelLabel": "Play studio film",
+    "reelNote": "Studio ident from the current Stolen Tribe website. This is the future home of the showreel."
+  }
+}

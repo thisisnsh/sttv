@@ -1,0 +1,8 @@
+---
+layout: base.njk
+title: Film, Television & Branded Work
+description: "Explore the Stolen Tribe archive and the stories still to come. Original film, branded content and television from an independent content studio rooted in the Black diaspora."
+nav: work
+---
+<section class="page-intro section-shell"><div class="section-topline"><span class="eyebrow">The work / An evolving collection</span><span class="eyebrow">Original voices. Open horizons.</span></div><h1>EVERY FRAME.<br><span class="serif-word">A point of view.</span></h1><div class="page-intro-bottom"><p>Our story is just beginning. Here’s a first look at the archive, and a little room for what comes next.</p><span class="eyebrow">{{ projects | length }} chapters / Many more to come</span></div></section>
+<section class="work-index section-shell" aria-labelledby="collection-title"><h2 id="collection-title" class="sr-only">Studio archive and upcoming project slots</h2><div class="work-filters" aria-label="Filter projects"><button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All frames <span>{{ projects | length }}</span></button>{% for category in projects | categories %}<button class="filter-button" type="button" data-filter="{{ category }}" aria-pressed="false">{% if category == "In development" %}What’s next{% else %}{{ category }}{% endif %}</button>{% endfor %}</div><p class="sr-only" id="filter-status" role="status" aria-live="polite"></p><div class="projects-grid work-grid">{% for project in projects %}{% include 'project-card.njk' %}{% endfor %}</div><p class="concept-caption">An early look at the studio. Concept artwork and reserved project slots are labelled; project details and credits will be completed with the Tribe.</p></section>

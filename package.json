@@ -1,0 +1,20 @@
+{
+  "name": "sttv",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static site",
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "node scripts/clean.mjs && eleventy",
+    "check": "node scripts/check-build.mjs",
+    "test": "playwright test",
+    "assets": "node scripts/prepare-assets.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@playwright/test": "1.64.0",
+    "sharp": "0.35.5"
+  },
+  "engines": { "node": ">=22" }
+}
